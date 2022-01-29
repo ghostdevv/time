@@ -10,7 +10,9 @@
 
     let timeString: string;
 
-    const updateTimeString = (seconds) => {
+    updateTimeString(time);
+
+    function updateTimeString(seconds) {
         const hours = Math.floor(seconds / 3600);
         seconds -= hours * 3600;
 
@@ -18,9 +20,7 @@
         seconds -= minutes * 60;
 
         timeString = `${hours}:${minutes}:${seconds}`;
-    };
-
-    updateTimeString(time);
+    }
 
     function toggleTiming() {
         if (timing) {
@@ -35,6 +35,11 @@
 
         timing = !timing;
     }
+
+    function deleteSheet() {
+        delete $sheets[id];
+        $sheets = $sheets;
+    }
 </script>
 
 <card>
@@ -43,16 +48,27 @@
         <h5>{timeString}</h5>
     </div>
 
-    <button on:click={toggleTiming} class:red={timing} class:green={!timing}>
-        {timing ? 'Stop' : 'Start'}
-    </button>
+    <div class="buttons row">
+        <button
+            on:click={toggleTiming}
+            class:red={timing}
+            class:green={!timing}>
+            {timing ? 'Stop' : 'Start'}
+        </button>
+
+        <button on:click={deleteSheet} class="red"> Delete </button>
+    </div>
 </card>
 
-<style>
+<style lang="scss">
     card {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
+        .buttons {
+            width: fit-content;
+        }
     }
 </style>
