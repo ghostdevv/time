@@ -3,6 +3,6 @@
     import { sheets } from '@/data';
 </script>
 
-{#each $sheets as sheet (sheet.id)}
-    <Sheet {...sheet} />
+{#each Object.entries($sheets) as [id, sheet] (id)}
+    <Sheet {id} {...sheet} />
 {/each}
