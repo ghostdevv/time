@@ -18,7 +18,7 @@
 </script>
 
 <nav class="row">
-    <input bind:value={input} type="text" placeholder="Search or Create" />
+    <input bind:value={input} type="text" placeholder="Name" />
     <button on:click={create}> Create </button>
 </nav>
 
