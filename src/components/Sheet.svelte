@@ -40,7 +40,7 @@
 <card>
     <div class="col">
         <h2>{name}</h2>
-        <p>{timeString}</p>
+        <h5>{timeString}</h5>
     </div>
 
     <button on:click={toggleTiming} class:red={timing} class:green={!timing}>
