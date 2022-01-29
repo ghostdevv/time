@@ -6,6 +6,7 @@ specifiers:
   '@tauri-apps/api': ^1.0.0-beta.8
   '@tauri-apps/cli': ^1.0.0-beta.10
   '@tsconfig/svelte': ^2.0.1
+  date-fns: ^2.28.0
   ghostsui: ^1.2.0
   nanoid: ^3.2.0
   npm-run-all: ^4.1.5
@@ -23,6 +24,7 @@ devDependencies:
   '@tauri-apps/api': 1.0.0-beta.8
   '@tauri-apps/cli': 1.0.0-beta.10
   '@tsconfig/svelte': 2.0.1
+  date-fns: 2.28.0
   ghostsui: 1.2.0
   nanoid: 3.2.0
   npm-run-all: 4.1.5
@@ -860,6 +862,11 @@ packages:
       abab: 2.0.5
       whatwg-mimetype: 2.3.0
       whatwg-url: 8.7.0
+    dev: true
+
+  /date-fns/2.28.0:
+    resolution: {integrity: sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==}
+    engines: {node: '>=0.11'}
     dev: true
 
   /debug/4.3.3:
