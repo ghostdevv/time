@@ -5,6 +5,8 @@
     let input;
 
     function create() {
+        if (input.trim() == '') return;
+
         const id = nanoid();
         const name = input;
 
@@ -22,7 +24,7 @@
     <button on:click={create}> Create </button>
 </nav>
 
-<main>
+<main class="col">
     <slot />
 </main>
 
