@@ -1,7 +1,6 @@
-import sveltePreprocess from 'svelte-preprocess'
-const { typescript } = sveltePreprocess
+import sveltePreprocess from 'svelte-preprocess';
 
 export default {
-  extensions: ['.svelte'],
-  preprocess: [typescript()]
-}
+    extensions: ['.svelte'],
+    preprocess: [sveltePreprocess()],
+};
