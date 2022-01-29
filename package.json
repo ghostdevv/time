@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "run-p dev:routify dev:vite",
+    "site": "run-p dev:routify dev:vite",
+    "tauri": "tauri dev",
     "dev:routify": "routify run",
     "dev:vite": "vite",
     "dev:tauri": "tauri dev",
@@ -11,10 +12,9 @@
     "build:routify": "routify run -b",
     "build:vite": "vite build",
     "build:tauri": "tauri build",
-    "preview": "vite preview",
-    "tauri": "tauri",
-    "tauri-dev": "run-p dev:routify dev:vite dev:tauri",
-    "tauri-build": "run-s build:routify build:vite build:tauri"
+    "preview": "run-s build preview:*",
+    "preview:site": "npm run b",
+    "preview:tauri": "tauri"
   },
   "devDependencies": {
     "@roxi/routify": "^2.18.4",
