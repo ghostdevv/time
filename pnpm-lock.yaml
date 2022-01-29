@@ -6,6 +6,7 @@ specifiers:
   '@tauri-apps/api': ^1.0.0-beta.8
   '@tauri-apps/cli': ^1.0.0-beta.10
   '@tsconfig/svelte': ^2.0.1
+  ghostsui: ^1.2.0
   npm-run-all: ^4.1.5
   svelte: ^3.46.3
   svelte-preprocess: ^4.10.2
@@ -19,6 +20,7 @@ devDependencies:
   '@tauri-apps/api': 1.0.0-beta.8
   '@tauri-apps/cli': 1.0.0-beta.10
   '@tsconfig/svelte': 2.0.1
+  ghostsui: 1.2.0
   npm-run-all: 4.1.5
   svelte: 3.46.3
   svelte-preprocess: 4.10.2_svelte@3.46.3+typescript@4.5.5
@@ -1630,6 +1632,13 @@ packages:
       get-intrinsic: 1.1.1
     dev: true
 
+  /ghostsui/1.2.0:
+    resolution: {integrity: sha512-Z+yAxr7R4a8UTCVJSgDgXiERHqW3feb3RmUKUGddf/rKJG94hr5ZvfOv83OBl8+3upJ5X7eODYWWYu1Rsqv/UQ==}
+    dependencies:
+      greset: 2.0.0-8
+      sass-hex-rgb: 1.0.0
+    dev: true
+
   /github-from-package/0.0.0:
     resolution: {integrity: sha1-l/tdlr/eiXMxPyDoKI75oWf6ZM4=}
     dev: true
@@ -1769,6 +1778,12 @@ packages:
 
   /graceful-fs/4.2.9:
     resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==}
+    dev: true
+
+  /greset/2.0.0-8:
+    resolution: {integrity: sha512-BA/URMGXsVtGYjWTCU8lJ1gVfRBNvIo9msI/LP5RSNbxVE9GDM1nYFvYCQ3UnTCzhSTuXDuMGXoH5G8/7OT0pA==}
+    dependencies:
+      rfs: 9.0.6
     dev: true
 
   /has-ansi/2.0.0:
@@ -2989,6 +3004,10 @@ packages:
     hasBin: true
     dev: true
 
+  /postcss-value-parser/4.2.0:
+    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
+    dev: true
+
   /postcss/8.4.5:
     resolution: {integrity: sha512-jBDboWM8qpaqwkMwItqTQTiFikhs/67OYVvblFFTM7MrZjt6yMKd6r2kgXizEbTTljacm4NldIlZnhbjr84QYg==}
     engines: {node: ^10 || ^12 || >=14}
@@ -3230,6 +3249,13 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
+  /rfs/9.0.6:
+    resolution: {integrity: sha512-KQ0EGVP4l3B3ynUZ1UNX3UoRAeswiX+ljGRcT+MoJKXRwXSUFpVZIPsqurH9pmY/AOGBFq7KKBq9fhRCkkg+SQ==}
+    engines: {node: '>=8'}
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
   /rimraf/2.7.1:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
     hasBin: true
@@ -3299,6 +3325,10 @@ packages:
       graceful-fs: 4.2.9
       mkdirp: 0.5.5
       rimraf: 2.7.1
+    dev: true
+
+  /sass-hex-rgb/1.0.0:
+    resolution: {integrity: sha512-UpOYQjt1z6nloj/HHSAFiVGnBHQiFjbGU5oyh2FoMev11fN4iJFDM3TJym/lD7QZHXhbigoK1XHyq0M1Ws08GA==}
     dev: true
 
   /saxes/5.0.1:
