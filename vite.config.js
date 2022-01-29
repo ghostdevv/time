@@ -14,6 +14,15 @@ export default defineConfig(({ command, mode }) => {
             }),
         ],
 
+        resolve: {
+            alias: [
+                {
+                    find: '@',
+                    replacement: path.resolve(__dirname, './src'),
+                },
+            ],
+        },
+
         build: {
             minify: isProduction,
         },
