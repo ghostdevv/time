@@ -24,6 +24,7 @@
     "@tsconfig/svelte": "^2.0.1",
     "ghostsui": "^1.2.0",
     "npm-run-all": "^4.1.5",
+    "sass": "^1.49.0",
     "svelte": "^3.46.3",
     "svelte-preprocess": "^4.10.2",
     "tslib": "^2.3.1",
