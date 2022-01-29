@@ -5,18 +5,15 @@
     let input;
 
     function create() {
+        const id = nanoid();
         const name = input;
 
         input = undefined;
 
-        $sheets = [
-            ...$sheets,
-            {
-                id: nanoid(),
-                name,
-                time: 0,
-            },
-        ];
+        $sheets[id] = {
+            name,
+            time: 0,
+        };
     }
 </script>
 
