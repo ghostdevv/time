@@ -21,13 +21,15 @@
     }
 
     function updateTimeString(seconds) {
+        const dd = (num: number): string => `${num < 10 ? '0' : ''}${num}`;
+
         const hours = Math.floor(seconds / 3600);
         seconds -= hours * 3600;
 
         const minutes = Math.floor(seconds / 60);
         seconds -= minutes * 60;
 
-        timeString = `${hours}:${minutes}:${seconds}`;
+        timeString = `${dd(hours)}:${dd(minutes)}:${dd(seconds)}`;
     }
 
     function toggleTiming() {
