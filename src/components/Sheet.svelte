@@ -6,11 +6,19 @@
     export let time: number;
 
     let timing: boolean;
-    let interval;
-
     let timeString: string;
 
+    let interval;
+    let timestamp: number;
+
     updateTimeString(time);
+
+    function getTimestampDiff(): number {
+        const now = Date.now();
+        const diff = now - (timestamp || Date.now());
+
+        return Math.ceil(diff / 1000);
+    }
 
     function updateTimeString(seconds) {
         const hours = Math.floor(seconds / 3600);
@@ -25,12 +33,18 @@
     function toggleTiming() {
         if (timing) {
             clearInterval(interval);
-            $sheets[id] = { name, time };
+
+            $sheets[id] = {
+                name,
+                time: getTimestampDiff() + time,
+            };
         } else {
+            timestamp = Date.now();
+
             interval = setInterval(() => {
-                time = time + 1;
-                updateTimeString(time);
-            }, 1000);
+                const diff = getTimestampDiff();
+                updateTimeString(time + diff);
+            }, 500);
         }
 
         timing = !timing;
