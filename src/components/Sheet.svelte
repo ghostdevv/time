@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { createStopwatch, StopWatch } from '@/helpers/stopwatch';
     import { sheets } from '@/data';
 
     export let id: string;
@@ -9,18 +10,11 @@
     let timeString: string;
 
     let interval;
-    let timestamp: number;
+    let watch: StopWatch;
 
     updateTimeString(time);
 
-    function getTimestampDiff(): number {
-        const now = Date.now();
-        const diff = now - (timestamp || Date.now());
-
-        return Math.ceil(diff / 1000);
-    }
-
-    function updateTimeString(seconds) {
+    function updateTimeString(seconds: number) {
         const dd = (num: number): string => `${num < 10 ? '0' : ''}${num}`;
 
         const hours = Math.floor(seconds / 3600);
@@ -32,21 +26,23 @@
         timeString = `${dd(hours)}:${dd(minutes)}:${dd(seconds)}`;
     }
 
+    function update() {
+        updateTimeString(watch.getTime());
+    }
+
     function toggleTiming() {
         if (timing) {
             clearInterval(interval);
 
             $sheets[id] = {
                 name,
-                time: getTimestampDiff() + time,
+                time: watch.getTime(),
             };
         } else {
-            timestamp = Date.now();
+            watch = createStopwatch(time);
 
-            interval = setInterval(() => {
-                const diff = getTimestampDiff();
-                updateTimeString(time + diff);
-            }, 500);
+            update();
+            interval = setInterval(update, 500);
         }
 
         timing = !timing;
