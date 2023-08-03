@@ -26,7 +26,7 @@
     "nanoid": "^3.2.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.49.0",
-    "svelte": "^3.46.3",
+    "svelte": "^3.49.0",
     "svelte-local-storage-store": "^0.2.6",
     "svelte-preprocess": "^4.10.2",
     "tslib": "^2.3.1",
